@@ -1,8 +1,14 @@
 Feltöltés folyamata:
 
+elsőnek:
+
 git remote add <név> <url (a projekt url)>
 git commit -m <megjegyzés>
 git push <remotenév> main
 
-ez után 
+utána:
+
+git add <fájl név>
+git commit -m <megjegyzés> 
 git push
+
