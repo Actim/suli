@@ -1,0 +1,8 @@
+Feltöltés folyamata:
+
+git remote add <név> <url (a projekt url)>
+git commit -m <megjegyzés>
+git push <remotenév> main
+
+ez után 
+git push
