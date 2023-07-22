@@ -1,0 +1,19 @@
+<?php
+// // Erre azért van szükség hogy biztosan tudd hogy tőlünk kapod a kérést
+$addresses = array('213.181.201.74', '217.144.53.30');
+if(!in_array($_SERVER['REMOTE_ADDR'], $addresses))
+    die('Nem csalunk kicsi mano...');
+
+$phone   = $_GET["tel"]; // Telefonszám amiről jön a hívás. 
+$prefix  = $_GET["prefix"]; // Prefix amire menjen a hívás
+$message = urldecode( $_GET["message"] ); // ??
+$value   = $_GET["value"]; // összeg 900 Ft
+$smsid   = $_GET["id"]; // A fizető ID-ja (tesztelésnél 0)
+
+if ($phone == '06300000000') {
+    // Teszt SMS - Ha nem teszteled, akkor vedd le a kommentet az ez alatt lévő sorrol
+    // die('Teszt SMS');
+}
+
+echo 'Valasz uzenet...'; // ékezetet is tartalmazhat (szám beváltó oldalon jelenik meg)
+?>
